@@ -1,7 +1,7 @@
 elec_factor = {'coal':935, 'natural gas':500, 'oil':800, 'biomass':60, 'wind':11, 'solar power':45, 'hydropower':15, 'nuclear':15}
 materials_factor = {'plastic':2.7, 'rubber':3.5, 'aluminum':12, 'steel':2.15, 'polycarbonate':7.35, 'copper wires':4.25}
 transportation_factor = {'gasoline cars':185, 'diesel cars':150, 'hybrid cars':85, 'ev':0, 'diesel bus':1000, 'natural gas buses':850, 'electrical bus':0}
-waste_factor = 700
+#waste_factor = 700
 
 print("This is a wonderful carbon emissions calculator.")
 
@@ -34,10 +34,10 @@ transport_emi = transportation_factor.get(transport_type, 0) * float(distance_tr
 
 
 # Waste Emissions
-waste_quantity = input("How much waste did we generate (in kilograms)?: ").strip()
-waste_emi = waste_factor * float(waste_quantity)
+#waste_quantity = input("How much waste did we generate (in kilograms)?: ").strip()
+#waste_emi = waste_factor * float(waste_quantity)
 
 
 # Total Emissions
-total_emissions = elec_emi + total_material_emissions + transport_emi + waste_emi
+total_emissions = elec_emi + total_material_emissions + transport_emi
 print(f"The total carbon emissions are {total_emissions} kg CO2.")
